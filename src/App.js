@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import { Home, HomePlayground } from './Routes/Home';
+
+import { JoinMe, JoinMePlayground } from './Routes/JoinMe';
+import { Landing, LandingPlayground } from './Routes/Landing';
+import Playground from './Routes/Playground';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Code in The Drunk
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <Route path="/" exact component={Home} />
+        <Route path="/home" exact component={Home} />
+        <Route path="/home/playground" exact component={HomePlayground} />
+        <Route path="/join-me" exact component={JoinMe} />
+        <Route path="/join-me/playground" exact component={JoinMePlayground} />
+        <Route path="/landing" exact component={Landing} />
+        <Route path="/landing/playground" exact component={LandingPlayground} />
+        <Route path="/playground" exact component={Playground} />
+      </Router>
     );
   }
 }

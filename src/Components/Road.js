@@ -3,12 +3,10 @@ import styled from 'styled-components';
 
 const Road = styled('div')`
   display: flex;
-
-  margin-left:100px;
-  margin-right:100px;
-  background-color: #E8E5E5;
+  justify-content: space-between;
+  background-color: none;
   max-width: 100%;
-  width:auto;
+  width:100%;
   height: 40px;
   color: blue;
   padding: 32px;

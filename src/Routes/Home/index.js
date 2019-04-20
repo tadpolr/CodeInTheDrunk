@@ -1,4 +1,4 @@
-import Home from './Home';
+import Home from './Home.container';
 import HomePlayground from './Playground';
 
 export { Home, HomePlayground };

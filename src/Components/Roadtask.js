@@ -3,12 +3,14 @@ import styled from 'styled-components';
 
 const Roadtask = styled('div')`
   display: flex;
-  margin:auto;
-  background-color: #E8E5E5;
+  margin:10px;
+  background-color: #FFFF00;
   max-width: 100%;
   width:20%;
-  color: blue;
-  padding: 32px;
+  height:40px;
+  color: Black;
+  padding:4px;
+  flex-direction: row ;
 `;
 
 export default Roadtask;

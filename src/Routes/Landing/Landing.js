@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Landing = () => {
+const Landing = ({ players }) => {
   return <div>Landing</div>;
 };
 

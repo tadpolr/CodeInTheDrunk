@@ -7,7 +7,7 @@ const onStartGame = () => {
     console.log(snapshot);
   });
 };
-const Home = () => {
+const Home = props => {
   return <HomeView onStartGame={onStartGame} />;
 };
 

@@ -14,18 +14,20 @@ const Home = ({ history }) => {
       return text;
     }
     const newID = randomID(4);
-    db.ref('rooms').on('value', snapshot => {
-      let rooms = snapshot.val();
-      if (!rooms) {
-        rooms = 0;
-      } else {
-        rooms[newID] = {
-          isActive: false,
-          players: 0,
-        };
-      }
-      return db.ref('rooms').update(rooms);
-    });
+    db.ref('rooms')
+      .once('value')
+      .then(snapshot => {
+        let rooms = snapshot.val();
+        if (!rooms) {
+          rooms = 0;
+        } else {
+          rooms[newID] = {
+            isActive: false,
+            players: 0,
+          };
+        }
+        return db.ref('rooms').update(rooms);
+      });
     history.push(`/join-me/${newID}`);
   };
   return <HomeView onStartGame={onStartGame} />;

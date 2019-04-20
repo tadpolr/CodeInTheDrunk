@@ -6,7 +6,6 @@ const Link = styled('div')`
   font-size: 30px;
   color: yellow;
   font-family: 'Rubik', sans-serif;
-  margin-left: -380px;
   font-style: italic;
 `;
 

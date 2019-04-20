@@ -8,7 +8,6 @@ const Name = styled('div')`
   border-style: solid;
   border-color: yellow;
   font-family: 'Rubik', sans-serif;
-  margin-left: -610px;
   border-width: 3px;
   padding-right: 20px;
   padding-left: 20px;

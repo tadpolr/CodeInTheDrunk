@@ -9,6 +9,13 @@ const Button = styled('button')`
   margin-top: 20px;
   margin-left: -250px;
   border-color: yellow;
+  cursor: pointer;
+  &:hover {
+    background-color: #bfbf00;
+  }
+  &:active {
+    background-color: #8b8b01;
+  }
 `;
 
 export default Button;

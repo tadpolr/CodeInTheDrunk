@@ -1,21 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import LandingView from './Landing';
-import { subscribeRoomData } from '../../firebase';
 
-const Landing = ({ match }) => {
-  const roomId = match.params.roomId;
-  const [players, setPlayers] = useState(null);
+import { db, subscribeRoomData } from '../../firebase';
 
-  //   useEffect(() => {
-  //     subscribeRoomData(roomId, snapshot => {
-  //       const { players } = snapshot.val() || {};
-  //       const playersArr = Object.keys(players).map(player => {
-  //         return players[player];
-  //       });
-  //       setPlayers(playersArr);
-  //     });
-  //   }, []);
-  return <LandingView players={players} />;
-};
+class Landing extends Component {
+  state = {
+    players: null,
+  };
+  componentDidMount() {
+    const { roomId } = this.props.match.params;
+    subscribeRoomData(roomId, snapshot => {
+      const { players = {} } = snapshot.val() || {};
+      const playersArr = Object.keys(players).map(p => {
+        return { name: p, ...players[p] };
+      });
+      this.setState({
+        players: playersArr,
+      });
+    });
+  }
+  handleClick = () => {
+    const { roomId } = this.props.match.params;
+    this.props.history.push(`/landing/${roomId}`);
+  };
+
+  handleComplete = () => {
+    const { roomId } = this.props.match.params;
+    db.ref(`rooms/${roomId}`).off();
+  };
+  render() {
+    const { players } = this.state;
+    if (!players) {
+      return null;
+    }
+    return <LandingView players={players} onComplete={this.handleComplete} />;
+  }
+}
 
 export default Landing;

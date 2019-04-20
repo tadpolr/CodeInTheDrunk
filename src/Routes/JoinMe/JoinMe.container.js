@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import JoinMeView from './JoinMe';
 
-import { subscribeRoomData } from '../../firebase';
+import { db, subscribeRoomData } from '../../firebase';
 
 class JoinMe extends Component {
   state = {
@@ -19,8 +19,10 @@ class JoinMe extends Component {
       });
     });
   }
+
   handleClick = () => {
     const { roomId } = this.props.match.params;
+    db.ref(`rooms/${roomId}`).off();
     this.props.history.push(`/landing/${roomId}`);
   };
   render() {

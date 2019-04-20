@@ -6,7 +6,6 @@ const Head = styled('div')`
   color: yellow;
   font-family: 'Rubik Mono One', sans-serif;
   text-align: center;
-  //padding-top: 200px;
 `;
 
 export default Head;

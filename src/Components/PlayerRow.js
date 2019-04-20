@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PlayerRow = styled('div')`
-  position:relative;
-  top:50px;
-  height:auto;
-  max-width:100%;
+  display: flex;
+  flex-grow: 1;
+  max-width: 100%;
   font-family: 'Rubik Mono One', sans-serif;
   text-align: center;
-  margin-bottom:90px;
-  padding-top:50px;
+  margin-bottom: 32px;
+  padding: 0 32px;
+  height: 160px;
 `;
 
 export default PlayerRow;

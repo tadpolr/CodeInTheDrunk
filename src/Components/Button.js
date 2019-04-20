@@ -8,6 +8,7 @@ const Button = styled('button')`
   font-family: 'Rubik Mono One', sans-serif;
   margin-top: 20px;
   margin-left: -335px;
+  border-color: yellow;
 `;
 
 export default Button;

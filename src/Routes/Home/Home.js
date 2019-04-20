@@ -8,7 +8,7 @@ const Home = ({ onStartGame }) => {
     <div>
       <Bg>
         <Head>Code In The Drunk</Head>
-        <Button onClick={onStartGame}>start now</Button>
+        <Button onClick={onStartGame}>create room</Button>
       </Bg>
     </div>
   );

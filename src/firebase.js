@@ -11,3 +11,8 @@ const config = {
 
 export const fire = firebase.initializeApp(config);
 export const db = fire.database();
+export const subscribeRoomData = (roomId, onChange) => {
+  db.ref(`rooms/${roomId}`).on('value', snapshot => {
+    onChange(snapshot);
+  });
+};

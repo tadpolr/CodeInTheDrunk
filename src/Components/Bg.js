@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Bg = styled('div')`
   display: flex;
   flex-direction: column;
+  align-content: flex-start;
   align-items: center;
   justify-content: center;
   background-color: black;

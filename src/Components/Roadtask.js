@@ -7,7 +7,7 @@ const Roadtask = styled('div')`
   background-color: #FFFF00;
   max-width: 100%;
   width:20%;
-  height:40px;
+  height:70px;
   color: Black;
   padding:4px;
   flex-direction: row ;

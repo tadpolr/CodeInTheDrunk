@@ -1,16 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Beer = styled('div')`
+const  Beer = styled('div')`
   display:flex;
   flex-direction:column;
-  width:auto;
+  max-width:100%;
   height:40px;
-  bottom:100px;
-  padding-left:225px;
+  bottom:60px;
+  margin-left:145px;
   color: white;
   position: absolute;
-  
   text-align: center;
   left: ${props => `${props.progress}%`}
 `;

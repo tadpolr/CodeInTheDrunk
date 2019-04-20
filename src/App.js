@@ -13,9 +13,9 @@ class App extends Component {
         <Route path="/" exact component={Home} />
         <Route path="/home" exact component={Home} />
         <Route path="/home/playground" exact component={HomePlayground} />
-        <Route path="/join-me" exact component={JoinMe} />
+        <Route path="/join-me/:roomId" exact component={JoinMe} />
         <Route path="/join-me/playground" exact component={JoinMePlayground} />
-        <Route path="/landing" exact component={Landing} />
+        <Route path="/landing/:roomId" exact component={Landing} />
         <Route path="/landing/playground" exact component={LandingPlayground} />
         <Route path="/playground" exact component={Playground} />
       </Router>

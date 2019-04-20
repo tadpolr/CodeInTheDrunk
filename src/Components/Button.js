@@ -7,7 +7,7 @@ const Button = styled('button')`
   color: black;
   font-family: 'Rubik Mono One', sans-serif;
   margin-top: 20px;
-  margin-left: -335px;
+  margin-left: -250px;
   border-color: yellow;
 `;
 

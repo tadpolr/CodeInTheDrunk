@@ -10,8 +10,15 @@ const JoinMe = () => {
       <Head>
         Code In The Drunk  
       </Head>
+      <Button>
+        game start!
+      </Button>
       <Link>
-        here is the link
+        <p>here is the link</p>
+        <p>USER A</p>
+        <p>USER B</p>
+        <p>USER C</p>
+        <p>USER D</p>
       </Link>
     </Bg>
   </div>;

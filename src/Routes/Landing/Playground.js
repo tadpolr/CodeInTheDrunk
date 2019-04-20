@@ -1,21 +1,26 @@
 import React from 'react';
-import Car from '../../Components/Beer';
+import Beer from '../../Components/Beer';
 import Road from '../../Components/Road';
 import Roadtask from '../../Components/Roadtask';
-import Bg from '../../Components/Bg';
+import Bglanding from '../../Components/Bglanding';
 import PlayerRow from '../../Components/PlayerRow';
+import Head from '../../Components/Head';
+
 
 const LandingPlayground = () => {
   return (
     <div>
-      
+        <Bglanding>
+          <Head>Code In The Drunk</Head> 
+
           {/* User A */}
-           <PlayerRow>
-            <Car progress={'40'}>
+           <PlayerRow>  
+            <Road style={{position: 'relative'}}>
+             <Beer progress={'0'}>
               <span>User A</span>
               <img style={{width:'80px'}} src="/images/beer.png" alt="My test image" />
-            </Car>
-            <Road>
+             </Beer>
+             <div style={{display: 'flex', width: '100%'}}>
              <Roadtask>
                <span>Task 1</span>  
              </Roadtask>
@@ -31,15 +36,18 @@ const LandingPlayground = () => {
              <Roadtask>
                <span>Task 5</span>  
              </Roadtask>
+             </div>
             </Road>
           </PlayerRow>
-          {/* UserB */}
-          <PlayerRow>
-            <Car progress={'80'}>
+         
+          {/* User B */}
+          <PlayerRow>  
+            <Road style={{position: 'relative'}}>
+             <Beer progress={'60'}>
               <span>User B</span>
               <img style={{width:'80px'}} src="/images/beer.png" alt="My test image" />
-            </Car>
-            <Road>
+             </Beer>
+             <div style={{display: 'flex', width: '100%'}}>
              <Roadtask>
                <span>Task 1</span>  
              </Roadtask>
@@ -55,81 +63,12 @@ const LandingPlayground = () => {
              <Roadtask>
                <span>Task 5</span>  
              </Roadtask>
+             </div>
             </Road>
           </PlayerRow>
-          {/* User C */}
-          <PlayerRow>
-            <Car progress={'20'}>
-              <span>User C</span>
-              <img style={{width:'80px'}} src="/images/beer.png" alt="My test image" />
-            </Car>
-            <Road>
-             <Roadtask>
-               <span>Task 1</span>  
-             </Roadtask>
-             <Roadtask>
-               <span>Task 2</span>  
-             </Roadtask>
-             <Roadtask>
-               <span>Task 3</span>  
-             </Roadtask>
-             <Roadtask>
-               <span>Task 4</span>  
-             </Roadtask>
-             <Roadtask>
-               <span>Task 5</span>  
-             </Roadtask>
-            </Road>
-          </PlayerRow>
-          {/* User D */}
-          <PlayerRow>
-            <Car progress={'60'}>
-              <span>User D</span>
-              <img style={{width:'80px'}} src="/images/beer.png" alt="My test image" />
-            </Car>
-            <Road>
-             <Roadtask>
-               <span>Task 1</span>  
-             </Roadtask>
-             <Roadtask>
-               <span>Task 2</span>  
-             </Roadtask>
-             <Roadtask>
-               <span>Task 3</span>  
-             </Roadtask>
-             <Roadtask>
-               <span>Task 4</span>  
-             </Roadtask>
-             <Roadtask>
-               <span>Task 5</span>  
-             </Roadtask>
-            </Road>
-          </PlayerRow>
-          {/* User E */}
-          <PlayerRow>
-            <Car progress={'0'}>
-              <span>User E</span>
-              <img style={{width:'80px'}} src="/images/beer.png" alt="My test image" />
-            </Car>
-            <Road>
-             <Roadtask>
-               <span>Task 1</span>  
-             </Roadtask>
-             <Roadtask>
-               <span>Task 2</span>  
-             </Roadtask>
-             <Roadtask>
-               <span>Task 3</span>  
-             </Roadtask>
-             <Roadtask>
-               <span>Task 4</span>  
-             </Roadtask>
-             <Roadtask>
-               <span>Task 5</span>  
-             </Roadtask>
-            </Road>
-          </PlayerRow>
-     
+
+          </Bglanding>
+         
     </div>
   );
 };

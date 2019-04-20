@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import { Home, HomePlayground } from './Routes/Home';
-
 import { JoinMe, JoinMePlayground } from './Routes/JoinMe';
 import { Landing, LandingPlayground } from './Routes/Landing';
 import Playground from './Routes/Playground';

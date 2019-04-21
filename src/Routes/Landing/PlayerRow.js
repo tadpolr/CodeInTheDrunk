@@ -7,7 +7,7 @@ import PlayerRowContainer from '../../Components/PlayerRow';
 const Beers = ({ progress, shots, name }) => {
   let shotsArr = ['0'];
   if (Number.isInteger(shots) && shots > 0) {
-    for (let i = 1; i < shots; i++) {
+    for (let i = 1; i <= shots; i++) {
       shotsArr.push(i.toString());
     }
   }

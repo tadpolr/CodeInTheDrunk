@@ -12,7 +12,8 @@ class Landing extends Component {
     subscribeRoomData(roomId, snapshot => {
       const { players = {} } = snapshot.val() || {};
       const playersArr = Object.keys(players).map(p => {
-        return { name: p, ...players[p] };
+        const player = players[p];
+        return { name: p, progress: player.progress * 20, shots: player.shots };
       });
       this.setState({
         players: playersArr,
